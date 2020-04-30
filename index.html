@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/stylesheet.css" rel="stylesheet">
+		<link href="css/jquery-ui.css" rel="stylesheet">
+		<link href="img/movie.png" rel="shortcut icon"/>
+		<title>Home | Descfilm</title>
+	</head>
+	<body onload="loads()" id="page-top" style="background-image: url('img/test.jpg');">
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: darkred" id="mainNav" onmouseover="other()">
+        	<div class="container">
+				<a class="navbar-brand js-scroll-trigger" href="index.html" style="color: white">Descfilm</a>
+            	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" style="background-color: firebrick; color: white;">
+      				<span class="navbar-toggler-icon my-toggler"></span>
+				</button>
+            	<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+                    	<li class="nav-item dropdown">
+                        	<a href="#" class="nav-link dropdown-toggle" id="genre" data-toggle="dropdown">Choose Genre...<b class="caret"></b></a>
+                        	<ul class="dropdown-menu multi-column columns-3" style="background: darkred">
+                        		<li>
+                        			<div>
+                        				<ul style="list-style-type: none; padding: 0px;">
+                                    		<li class="nav-item">
+                                        		<a class="nav-link js-scroll-trigger" onclick="comedy()" href="#comedy">Comedy</a>
+                                    		</li>
+                                    		<li class="nav-item">
+                                        		<a class="nav-link js-scroll-trigger" onclick="adventure()" href="#adventure">Adventure</a>
+                                    		</li>
+		                                    <li class="nav-item">
+		                                        <a class="nav-link js-scroll-trigger" onclick="action()" href="#action">Action</a>
+		                                    </li>
+                                		</ul>
+                            		</div>
+                            	</li>
+                        	</ul>
+                    	</li>
+	                    <li class="nav-item">
+	                        <a class="nav-link" href="about.html">About Us</a>
+	                    </li>
+					</ul>
+				</div>
+        	</div>
+		</nav>
+    	<br/><br/><br/>
+    	<div class="slideshow-container" id="home" onmouseover="other()">
+	        <img class="mySlides" src="img/a.jpg" style="width:100%">
+	        <img class="mySlides" src="img/b.jpg" style="width:100%">
+	        <img class="mySlides" src="img/c.jpg" style="width:100%">
+	        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+	        <div style="text-align:center">
+	            <span class="dot" onclick="currentSlide(1)"></span> 
+	            <span class="dot" onclick="currentSlide(2)"></span>
+	            <span class="dot" onclick="currentSlide(3)"></span>
+        	</div>
+    	</div>
+    	<br/><br/><br/>
+	    <header class="bg-transparent" onmouseover="other()">
+	        <div class="container text-center">
+	            <h1 style="color: white">Source on Most of Movie Details</h1>
+	            <p class="lead" style="color: white">Getting detail of many popular movies made easier with Descfilm</p>
+	        </div>
+		</header>
+		<br/><br/>
+		<div class="container">
+			<form class='inline-form row'>
+				<div class='col-md-10'>
+					<input class="form-control" type="text" placeholder="Search movie..." aria-label="Search" id="search">    
+				</div>    
+				<div class='col-md-2'>
+					<button class="btn btn-outline-white btn-block" type="submit" style="background-color: orange; color: white;" onclick="searchs()">Search</button>
+				</div>
+			</form>
+		</div>
+		<br/><br/>
+		<section onmouseover="other()" id="sears" style="display: none;">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-md-8">
+	                    <h2 class="section-heading" style="color: white" id="namasearch">Search</h2>
+	                </div>
+	            </div>
+	            <div class="row" id="searsi"></div>
+			</div>
+		</section>
+		<br/><br/>
+		<section onmouseover="comedy()" id="comedy">
+	        <div class="container">
+	            <div class="row">
+	                <div class="col-md-8">
+	                    <h2 class="section-heading" style="color: white">Comedy</h2>
+	                </div>
+	            </div>
+	            <div class="row" id="comedi"></div>
+			</div>
+		</section>
+		<br/><br/>
+		<section id="adventure" onmouseover="adventure()">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<h2 class="section-heading" style="color: white">Adventure</h2>
+					</div>
+				</div>
+				<div class="row" id="aventure"></div>
+			</div>
+		</section>
+		<br/><br/>
+		<section id="action" onmouseover="action()">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8">
+						<h2 class="section-heading" style="color: white">Action</h2>
+					</div>
+				</div>
+				<div class="row" id="acion"></div>
+			</div>
+		</section>
+		<br/><br/><br/>
+		<footer class="py-5 text-center text-small" style="background-color: firebrick" onmouseover="other()">
+			<div class="container">
+				<p style="color: white;">Copyright &copy; Descfilm 2020</p>
+				<ul class="list-inline">
+					<li class="list-inline-item">
+						<a href="#" style="color: white">Privacy Policy</a>
+					</li>
+					<li class="list-inline-item">
+						<a href="#" style="color: white">Terms of Use</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<a id="scroll" style="display: none;"><span></span></a>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.bundle.js"></script>
+		<script src="js/jquery.easing.js"></script>
+		<script src="js/agency.js"></script>
+		<script src="js/scroll.js"></script>
+		<script src="js/slideshow.js"></script>
+		<script src="js/indexscript.js"></script>
+		<script src="js/jsonindex.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script>
+			var title = [ 
+				"War Dogs", "Bad Moms", "Central Intelligence", "The BFG", "Don't Think Twice", 
+				"Mechanic: Resurrection", "The Light Between Oceans", "Ben-Hur", "The Legend of Tarzan", 
+				"Jason Bourne", "X-Men: Apocalypse", "Greater", "Citizen Soldier", "The Other Side", 
+				"God's Compass", "The ReZort", "The Apostle Peter: Redemption", "Unstoppable" 
+			];
+			title.sort();
+			$("#search").autocomplete({
+				source: function( request, response ) {
+					var matcher = new RegExp( "^" + $.ui.autocomplete.escapeRegex( request.term ), "i" );
+					response( $.grep( title, function( item ){
+						return matcher.test( item );
+          			}) );
+      			}
+			});
+			$("#search").autocomplete.sort()({
+				source: ["War Dogs", "Bad Moms", "Central Intelligence", "The BFG", "Don't Think Twice", 
+				"Mechanic: Resurrection", "The Light Between Oceans", "Ben-Hur", "The Legend of Tarzan", 
+				"Jason Bourne", "X-Men: Apocalypse", "Greater", "Citizen Soldier", "The Other Side", 
+				"God's Compass", "The ReZort", "The Apostle Peter: Redemption", "Unstoppable"]
+			});
+		</script>
+	</body>
+</html>
