@@ -6,7 +6,7 @@ $.getJSON("movie-detail.json",function(data){
             $("#title").append(val.title +' | Descfilm')
             $("#tabel").append(
                 '<tr>'+
-                    '<td rowspan="2"><img src="img/'+val.img+'"></td>'+
+                    '<td rowspan="2"><img src="img/'+val.img+'" width="125px"></td>'+
                     '<td class="text-uppercase"><h2>'+val.title +'</h2></td>'+
                 '</tr>'+
                 '<tr>'+
