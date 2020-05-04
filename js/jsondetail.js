@@ -1,8 +1,8 @@
 $.getJSON("movie-detail.json",function(data){
     var ids = localStorage.getItem("id")
-    var items=[];
+    var items = [];
     $.each(data, function(key, val) {
-        if(ids==val.id) {
+        if(ids == val.id) {
             $("#title").append(val.title +' | Descfilm')
             $("#tabel").append(
                 '<tr>'+

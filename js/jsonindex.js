@@ -1,22 +1,22 @@
-$.getJSON("movie-detail.json",function(data){
+$.getJSON("movie-detail.json",function(data) {
     var test;
     var x = 0;
     var genre;
     var b = localStorage.getItem("secion");
     var search = localStorage.getItem("searchs");
     var result = new RegExp(search,"i");
-    var items=[];
-    $.each(data, function(key, val){
+    var items = [];
+    $.each(data, function(key, val) {
         genre = val.genre;
         switch (genre) {
             case "Comedy" : test = "#comedi";
-                break;
+            break;
             case "Adventure" : test = "#aventure";
-                break;
+            break;
             case "Action" : test = "#acion";
-                break;
+            break;
             default : 
-                break;
+            break;
         }
         if(b=="true") {
             test = "#searsi";
@@ -32,7 +32,7 @@ $.getJSON("movie-detail.json",function(data){
                                 '<i class="fa fa-plus fa-3x"></i>'+
                             '</div>'+
                         '</div>'+
-                        '<img class="img-fluid" src="img/' +val.img+'" width="640px" height="426px">'+
+                        '<img class="img-fluid" src="img/'+val.img+'" width="640px" height="426px">'+
                     '</a>'+
                     '<div class="portfolio-caption">'+
                         '<h4 style="text-align: center; color: white">'+val.title+'</h4>'+
@@ -68,7 +68,7 @@ $.getJSON("movie-detail.json",function(data){
                 '</div>'
             )
         }
-        if((val.title).match(result)) {
+        if((val.title).match(result)||(val.year).match(result)||(val.genre).match(result)||(val.language).match(result)) {
             if(search!="") {
                 $(test).append(
                     '<div class="col-md-4 mb-4 box-item" >'+
